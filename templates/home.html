@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero"><h1>Complete genuine tasks and earn verified rewards.</h1><p>Rewards are added only after task verification. VIP memberships provide service benefits, not guaranteed profit.</p><a class="btn" href="/register">Create account</a></section>
+<section><h2>Daily Tasks</h2><div class="grid">{% for t in tasks %}<div class="card"><h3>{{t[1]}}</h3><p>{{t[2]}}</p><b>{{t[3]}} coins</b></div>{% endfor %}</div></section>
+<section><h2>VIP Memberships</h2><div class="grid">{% for p in plans %}<div class="card"><h3>{{p[0]}}</h3><div class="price">Rs. {{p[1]}}</div><p>{{p[2]}}</p><small>No fixed/guaranteed return.</small></div>{% endfor %}</div></section>
+{% endblock %}
